@@ -26,13 +26,21 @@ class Car extends Vehicle {
   int numberOfWheels = 4;
   void printSomething() {
     print(numberOfWheels);
+    @override
+    void accelerate() {
+      super.accelerate;
+    }
   }
 }
 
 class Truck implements Vehicle {
+  @override
   int speed = 15;
+  @override
   bool isEngineWorking = true;
+  @override
   bool isLightOn = true;
+  @override
   void accelerate() {
     speed += 1;
   }
