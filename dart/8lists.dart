@@ -14,6 +14,11 @@ void main() {
   final student = stuffs[1];
   print(student.name);
 
+  //students.where basically filters stuff checks boolean then you can do stuff condition
+  final filteredStudents =
+      stuffs.where((stuffs) => stuffs.name == Student('stiern'));
+  print(filteredStudents);
+
   stuffs.insert(0, Student('New Kid'));
 
   //if (student is Student) {
