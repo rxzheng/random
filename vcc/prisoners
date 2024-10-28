@@ -1,0 +1,24 @@
+from games.prisoners_dilemma.player import Player
+import random
+
+class CustomPlayer(Player):
+    def make_decision(self, game_state):
+        my_opponent = game_state["opponent_name"]
+        opponent_history = game_state["opponent_history"]
+        my_history = game_state["my_history"]
+        
+        # Your code here
+        if my_opponent == "WaverleyChristian1" or my_opponent == "GlenWaverley1":
+            decision = 'defect'
+        elif game_state['round_number'] == 1:
+            decision = 'collude'  # or 'defect'
+        elif game_state['round_number'] == 5 or game_state['round_number'] == 4:
+            decision = 'defect'
+        else:
+            decision = opponent_history[-1]
+
+        # Add custom feedback (will appear in blue in the game output) 
+        self.add_feedback("Round number: " + str(game_state['round_number']))
+        self.add_feedback("| Opponent history: " + str(opponent_history ))
+        
+        return decision

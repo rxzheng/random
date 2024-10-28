@@ -17,12 +17,13 @@ from instapy import InstaPy
 from instapy import smart_run
 
 # login credentials
-insta_username = input('username: ')
-insta_password = input('password: ')
+insta_username = 'qwfpjl1234'
+insta_password = 'Linux#1234'
 
 session = InstaPy(username=insta_username,
                   password=insta_password,
-                  headless_browser=False)
+                  headless_browser=False,
+                  geckodriver_path=r"/opt/homebrew/bin/geckodriver")
 
 with smart_run(session):
     # general settings

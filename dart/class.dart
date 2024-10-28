@@ -16,6 +16,9 @@ void main() {
 }
 
 class Cookie {
+  Cookie(){
+    
+  }
   //vars
   String shape = 'Circle';
   double size = 15.2;

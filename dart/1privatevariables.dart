@@ -3,7 +3,7 @@ void main() {
 
   print(cookie._height);
   cookie.setHeight = 15; //change the var (h) beacuse of setter
-  print(h);
+
 }
 
 class Cookie {
